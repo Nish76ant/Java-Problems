@@ -1,0 +1,30 @@
+/*Find x raised to the power y
+Two numbers are entred through the keyboard ..
+write a program to find the value of one number raised to the power of another
+(Do not use java-built in method)
+*/
+import java.util.Scanner;
+public class ForloopPractice3 
+{
+    public static void main(String [] args)
+    {
+        //for loop example practice set
+        //a^b = a*a*a----a,(b times multiply)
+        //a^3 = a*a*a--,(a mutiply 3 times)
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of a \n");
+        int a = sc.nextInt();
+        System.out.println("Enter the value of b \n");
+        int b = sc.nextInt();
+        int result = 1;
+        for(int i = 0;i<b;i++)
+        {
+            result *= a;
+
+        }
+        System.out.println(result);
+
+
+    }
+    
+}
