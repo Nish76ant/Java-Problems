@@ -1,0 +1,37 @@
+//Income Tax Calculator Program In Java Programming Language
+/*Calculate income tax for paid by an employee to the government as
+per the salaries mentioned below
+  */
+package com.company;
+import java.util.Scanner;
+public class IncomeTaxCalculatorInJava
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        //Intialize the tax variable by the Zero (0)
+        int tax = 0;
+        System.out.println("Enter the income in the lacks\n");
+        int income = sc.nextInt();
+        if(income<=250000)
+        {
+            tax = tax+0;
+        }
+        else if(income > 250000 && income<=500000)
+        {
+            tax = tax+5*(income-250000)/100;
+        }
+        else if(income > 500000 && income <= 1000000)
+        {
+            tax = tax+5*(500000 - 250000)/100;
+            tax = tax+20*(income - 500000)/100;
+        }
+        else if(income > 1000000)
+        {
+            tax = tax + 5 * (500000 - 250000) / 100;
+            tax = tax + 20 * (1000000 - 500000) / 100;
+            tax = tax + 30 * (income - 1000000) / 100;
+        }
+        System.out.println("Tax Paid by Employee is"+ tax);
+    }
+}
