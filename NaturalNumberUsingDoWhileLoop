@@ -1,0 +1,19 @@
+package com.company;
+import java.util.Scanner;
+public class NaturalNumberUsingDoWhileLoop
+{
+    public static void main(String[] args)
+    {
+        //Do While loop Program using java
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        int number = sc.nextInt();
+        int n = 0;
+        do {
+            //System.out.println("First n natural number\n");
+            System.out.println(n);
+            n++;
+        }
+        while(n<=number);
+    }
+}
