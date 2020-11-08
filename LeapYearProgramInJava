@@ -1,0 +1,32 @@
+/*
+Write a Java Program to find out
+wheather a year entred by the
+user is a leap year or not
+ */
+package com.company;
+import java.util.Scanner;
+public class LeapYearProgramInJava
+{
+    public static void main(String[] args)
+    {
+        //Inits
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the Year\n");
+        int year = sc.nextInt();
+        sc.close();
+
+        //Check wheather year is leap year
+        if(year % 4 == 0 && year %100 != 0)
+        {
+            System.out.println(year +" is a leap year");
+        }
+        else if(year % 400 == 0)
+        {
+            System.out.println(year + " is a leap year");
+        }
+        else
+        {
+            System.out.println("Year is Not Leap Year");
+        }
+    }
+}
